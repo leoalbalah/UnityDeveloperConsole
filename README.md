@@ -1,4 +1,4 @@
-# UnityDeveloperConsole_WIP
+# UnityDeveloperConsole
 
 Basic Unity Engine **Developer Console** for testing and debugging in the editor or in the build projects.
 
