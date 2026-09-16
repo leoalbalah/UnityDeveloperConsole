@@ -2,6 +2,25 @@
 
 Basic Unity Engine **Developer Console** for testing and debugging in the editor or in the build projects.
 
+## Getting started
+
+- **Engine:** Unity `6000.6.0f1` (Universal Render Pipeline)
+- **Project location:** [`Unity/UnityDeveloperConsole`](./Unity/UnityDeveloperConsole)
+
+Open the project via Unity Hub, or:
+
+```
+unity open Unity/UnityDeveloperConsole
+```
+
+## Repository layout
+
+```
+UnityDeveloperConsole/
+├── Unity/UnityDeveloperConsole/    the Unity project
+└── README.md
+```
+
 ## Features
 
 * Responsive Layout.
@@ -13,6 +32,9 @@ Basic Unity Engine **Developer Console** for testing and debugging in the editor
 * Console prints the default unity log.
 * <Command> -help displays the command info.
 * Clean UI.
+* Command history — cycle through previously entered commands with Arrow Up / Arrow Down.
+* Tab-completion — press Tab to auto-complete a command, or fill in the longest shared prefix when multiple commands match.
+* `DeveloperConsole.ConsoleVisibilityChanged` event fires when the console opens/closes, so other systems can pause input, etc.
 
 ### Commands Included
 
@@ -24,16 +46,17 @@ Basic Unity Engine **Developer Console** for testing and debugging in the editor
 
 ## Dependencies
 
-* Created with **Unity 2021.3.3f1**.
-* Uses the new **InputSystem**.
+* Created with **Unity 6000.6.0f1**, Universal Render Pipeline template.
+* Uses the new **Input System** (`com.unity.inputsystem`).
+* TextMeshPro / TMP Essential Resources (import into your own project if not already present — see setup below).
 
 ## Installation & SetUp
 
 1. Get the [Latest Release](https://github.com/leoalbalah/UnityDeveloperConsole/releases).
 2. Import the Development Console unitypackage.
-3. Import TMP essentials.
-4. Import The new Input System Package.
+3. Import TMP essentials (Window > TextMeshPro > Import TMP Essential Resources), if not already present in your project.
+4. Import The new Input System Package, if not already present in your project.
 5. Add a Event System to the scene.
-6. Drag & Drop the PF_DeveloperConsole prefab into the scene.
-7. Adjust the canvases(in case of needed).
+6. Drag & Drop the `Assets/DevTools/DeveloperConsole/PF_DeveloperConsole` prefab into the scene.
+7. Adjust the canvases (in case of needed).
 8. All Set. Open the terminal using the **`** character
